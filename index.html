@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | Shahid Iqbal</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome (icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
+  <!-- ================= NAVBAR ================= -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">My Portfolio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#timeline">4 Week Journey</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#evidence">Evidence</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO / HOME ================= -->
+  <header id="home" class="hero-section d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left content -->
+        <div class="col-lg-7" data-aos="fade-right">
+          <p class="badge bg-gradient mb-3">VIBE Coding & AI Agents Course</p>
+          <h1 class="display-4 fw-bold mb-3">
+            Hi, I’m <span class="accent-text">Shahid Iqbal</span>.
+          </h1>
+          <h2 class="h4 text-muted mb-4">
+            <span id="typing-text"></span>
+          </h2>
+
+          <p class="lead mb-4">
+            Over the last 4 weeks, I learned how to build <strong>AI agents</strong>,
+            design <strong>automations</strong>, and create <strong>web projects</strong>
+            using modern tools. This portfolio is my complete journey from first prompt to final automation.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-code me-2"></i> View My Projects
+            </a>
+            <a href="#timeline" class="btn btn-outline-light btn-lg">
+              <i class="fa-solid fa-timeline me-2"></i> 4 Week Journey
+            </a>
+          </div>
+        </div>
+
+        <!-- Right illustration -->
+        <div class="col-lg-5 text-center mt-4 mt-lg-0" data-aos="fade-left">
+          <div class="hero-card shadow-lg">
+            <i class="fa-solid fa-robot hero-icon mb-3"></i>
+            <h3 class="h5 fw-semibold mb-2">AI + Code = My Superpower</h3>
+            <p class="small text-muted mb-3">
+              I build practical WorkflowsAutomations, Task Managers, and interactive web projects that solve real problems.
+            </p>
+            <ul class="list-unstyled text-start small">
+              <li><i class="fa-solid fa-check text-success me-2"></i> AI Agent Workflows</li>
+              <li><i class="fa-solid fa-check text-success me-2"></i> HTML, CSS, JavaScript</li>
+              <li><i class="fa-solid fa-check text-success me-2"></i> JSON & API Structures</li>
+              <li><i class="fa-solid fa-check text-success me-2"></i> Automations & Problem Solving</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="section-padding bg-light">
+    <div class="container">
+      <div class="section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold">Skills & Tools</h2>
+        <p class="text-muted">
+          A snapshot of what I can confidently use after completing the Vibe Coding & AI Agents program.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- AI & Automations -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <i class="fa-solid fa-robot me-2 accent-text"></i> AI & Automations
+              </h5>
+              <ul class="list-unstyled small mb-0">
+                <li>✅ Prompt engineering & system prompts</li>
+                <li>✅ Multi step AI agents</li>
+                <li>✅ JSON based workflows</li>
+                <li>✅ Research & summarization agents</li>
+                <li>✅ Task, reminder, and email automation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web & App Dev -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <i class="fa-solid fa-code me-2 accent-text"></i> Web Development
+              </h5>
+              <ul class="list-unstyled small mb-3">
+                <li>✅ HTML5, CSS3, Bootstrap 5</li>
+                <li>✅ Responsive design & layouts</li>
+                <li>✅ JavaScript DOM manipulation</li>
+                <li>✅ Basic game logic & interactions</li>
+                <li>✅ GitHub Pages deployment</li>
+              </ul>
+              <p class="small text-muted mb-1">Comfort level:</p>
+              <div class="progress mb-1" style="height: 6px;">
+                <div class="progress-bar" style="width: 80%;"></div>
+              </div>
+              <p class="small text-muted fst-italic">
+                Always learning and improving.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <i class="fa-solid fa-lightbulb me-2 accent-text"></i> Problem-Solving & Soft Skills
+              </h5>
+              <ul class="list-unstyled small mb-0">
+                <li>✅ Breaking problems into clear steps</li>
+                <li>✅ Explaining logic in simple words</li>
+                <li>✅ Documenting work and results</li>
+                <li>✅ Learning from errors and debugging</li>
+                <li>✅ Collaborating & taking feedback</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!-- row -->
+    </div>
+  </section>
+
+  <!-- ================= 4 WEEK JOURNEY ================= -->
+  <section id="timeline" class="section-padding">
+    <div class="container">
+      <div class="section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold">My 4 Week Vibe Coding & AI Agents Course Journey</h2>
+        <p class="text-muted">
+          A week by week breakdown of tools, concepts, problems solved, and mini-projects.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Week 1 -->
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Week 1 – Foundations of AI & Web Using Lovable.dev</h5>
+              <span class="badge bg-primary mb-2">Tools & Concepts</span>
+              <p class="small text-muted mb-2">
+                Focus: Understanding AI basics, prompt structure, and starting with Lovable.dev.
+              </p>
+              <ul class="small mb-2">
+                <li><strong>Tools:</strong> ChatGPT, browser, VS Code, GitHub</li>
+                <li><strong>Concepts:</strong> prompts, roles, tokens, HTML structure, CSS basics</li>
+                <li><strong>Problems solved:</strong> creating my first AI prompts, building Task Flow Manager using Lovable.dev</li>
+                <li><strong>Mini-projects:</strong> Personal Task Manager</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 2 -->
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card shadow-sm">
+            <div class="card-body">
+                 <h5 class="card-title">Week 2 – Coding Challenges & Mini Apps Using Cursor AI & Android Studio</h5>
+              <span class="badge bg-warning text-dark mb-2">Code in Action</span>
+              <p class="small text-muted mb-2">
+                Focus: using JavaScript for interaction, games, and practical utilities.
+              </p>
+              <ul class="small mb-2">
+                <li><strong>Tools:</strong> HTML, CSS, JavaScript, Bootstrap</li>
+                <li><strong>Concepts:</strong> DOM events, game loops, timers, responsive layouts</li>
+                <li><strong>Problems solved:</strong> user input handling, score tracking, animation triggers</li>
+                <li><strong>Mini-projects:</strong> simple FPS-style shooting game, calculator, to-do list</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 3 -->
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card shadow-sm">
+            <div class="card-body">
+             <h5 class="card-title">Week 3 – AI Agents & Workflows Using n8n</h5>
+              <span class="badge bg-success mb-2">Agents & Automation</span>
+              <p class="small text-muted mb-2">
+                Focus: Building structured AI agents using n8n that follow steps and return JSON outputs.
+              </p>
+              <ul class="small mb-2">
+		<li><strong>Tools:</strong> AI agents, JSON schema, basic workflow tools</li>
+                <li><strong>Concepts:</strong> multi-step reasoning, function-like prompts, context management</li>
+                <li><strong>Problems solved:</strong> daily planner agent, email draft generator</li>
+                <li><strong>Mini-projects:</strong> “Task Manager Agent” with JSON output, FAQ responder agent</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 4 -->
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Week 4 – Real World Automations Using Make.com</h5>
+              <span class="badge bg-danger mb-2">Final Integration</span>
+              <p class="small text-muted mb-2">
+                Focus: Combining AI agents, workflows, using make.com to build complete solutions.
+              </p>
+              <ul class="small mb-2">
+                <li><strong>Tools:</strong> AI agents, workflows, HTML/CSS/JS, GitHub Pages</li>
+                <li><strong>Concepts:</strong> end to end automations, UX thinking, documentation</li>
+                <li><strong>Problems solved:</strong> repetitive email writing, content drafting, task follow up</li>
+                <li><strong>Mini-projects:</strong> This portfolio, plus a final AI automation project</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!-- timeline -->
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="section-padding bg-light">
+    <div class="container">
+      <div class="section-title text-center mb-4" data-aos="fade-up">
+        <h2 class="fw-bold">Projects & Automations</h2>
+        <p class="text-muted">
+          A collection of my best coding projects and AI agents built during the Vibe Coding & AI Agents course.
+        </p>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="d-flex justify-content-center mb-4" data-aos="fade-up">
+        <div class="btn-group">
+          <button class="btn btn-outline-primary active project-filter" data-filter="all">All</button>
+          <button class="btn btn-outline-primary project-filter" data-filter="ai">AI Agents</button>
+          <button class="btn btn-outline-primary project-filter" data-filter="web">Web Projects</button>
+          <button class="btn btn-outline-primary project-filter" data-filter="game">Games</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Project 1: AI Agent -->
+        <div class="col-md-4 project-item" data-category="ai" data-aos="fade-up">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="assets/task-agent.png"
+              class="card-img-top"
+              alt="Task Manager AI Agent Screenshot"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Task Manager AI Agent</h5>
+              <p class="card-text small flex-grow-1">
+                An AI agent that helps users plan their day, prioritize tasks, and
+                outputs structured JSON for integration into productivity tools.
+              </p>
+              <ul class="small mb-3">
+                <li>✅ Uses multi step reasoning</li>
+                <li>✅ Returns JSON output</li>
+                <li>✅ Provides time estimates</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-success">AI Agent</span>
+                <a href="https://clear-board-project.lovable.app/auth" target="_blank" class="small text-decoration-none">
+                  View details →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Web -->
+        <div class="col-md-4 project-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="assets/lovable-pharm.png"
+              class="card-img-top"
+              alt="Pharma Screenshot"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Pharma</h5>
+              <p class="card-text small flex-grow-1">
+                Pharmacy POS System
+              </p>
+              <ul class="small mb-3">
+                <li>✅ Fully responsive</li>
+                <li>✅ Smooth scrolling</li>
+                <li>✅ Reusable components</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-primary">Web</span>
+                <a href="https://pharmaflow-gh.lovable.app/login" target="_blank" class="small text-decoration-none">
+                  Live demo →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Game -->
+        <div class="col-md-4 project-item" data-category="game" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="assets/fps-game.png"
+              class="card-img-top"
+              alt="FPS Game Screenshot"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Browser FPS Mini Game</h5>
+              <p class="card-text small flex-grow-1">
+                A simple first-person shooting game made with HTML, CSS and JavaScript,
+                featuring an AI-assisted crosshair for slight “aim assist.”
+              </p>
+              <ul class="small mb-3">
+                <li>✅ Moving targets</li>
+                <li>✅ Score tracking</li>
+                <li>✅ Aim assist logic</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-warning text-dark">Game</span>
+                <a href="https://github.com/shahidiqbalmughaal/My-shooting-game" target="_blank" class="small text-decoration-none">
+                  GitHub repo →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more project cards as needed (copy & edit) -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= EVIDENCE / GALLERY ================= -->
+  <section id="evidence" class="section-padding bg-light">
+    <div class="container">
+      <div class="section-title text-center mb-4" data-aos="fade-up">
+        <h2 class="fw-bold">Evidence of My Work</h2>
+        <p class="text-muted">
+          Screenshots, JSON samples, workflows, and links that prove what I built during the Vibe Coding & AI Agents course.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Screenshot gallery -->
+        <div class="col-lg-8" data-aos="fade-right">
+          <div class="row g-3">
+            <!-- Image 1 -->
+            <div class="col-6">
+              <div class="evidence-item">
+                <img
+                  src="assets/ss_fitness_app.png"
+                  class="img-fluid rounded shadow-sm"
+                  alt="Fitness App Screenshot"
+                />
+                <span class="badge bg-dark position-absolute m-2">Fitness App</span>
+              </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="col-6">
+              <div class="evidence-item">
+                <img
+                  src="assets/json_workflow.jpeg"
+                  class="img-fluid rounded shadow-sm"
+                  alt="Workflow Screenshot"
+                />
+                <span class="badge bg-dark position-absolute m-2">Workflow</span>
+              </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="col-6">
+              <div class="evidence-item">
+                <img
+                  src="assets/evidence-game.png"
+                  class="img-fluid rounded shadow-sm"
+                  alt="Game Screenshot"
+                />
+                <span class="badge bg-dark position-absolute m-2">Game</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Links & files -->
+        <div class="col-lg-4" data-aos="fade-left">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Links, Files & Proof</h5>
+              <p class="small text-muted">
+                Below are some direct links to my work. These can include GitHub repos,
+                live demos, JSON files, and exported workflows.
+              </p>
+              <ul class="small list-unstyled">
+                <li class="mb-2">
+                  <i class="fa-solid fa-link me-2 text-primary"></i>
+                  <strong>GitHub Portfolio Repo:</strong>
+                  <a href="#" target="_blank">github.com/your-username/vibe-portfolio</a>
+                </li>
+                <li class="mb-2">
+                  <i class="fa-solid fa-link me-2 text-primary"></i>
+                  <strong>AI Agent JSON Samples:</strong>
+                  <a href="assets/workflow_n8n.json" target="_blank">My workflow n8n.json</a>
+                </li>
+                <li class="mb-2">
+                  <i class="fa-solid fa-link me-2 text-primary"></i>
+                  <strong>Workflow Diagram:</strong>
+                  <a href="assets/wf_diagram.png" target="_blank">final-automation-workflow.png</a>
+                </li>
+                <li class="mb-2">
+                  <i class="fa-solid fa-link me-2 text-primary"></i>
+                  <strong>Live Game Demo:</strong>
+                  <a href="https://react-random-click-g-27kb.bolt.host/" target="_blank">Shooting Game</a>
+                </li>
+                <li class="mb-2">
+                  <i class="fa-solid fa-link me-2 text-primary"></i>
+                  <strong>Pharma Page Demo:</strong>
+                  <a href="https://pharmaflow-gh.lovable.app/login" target="_blank">Pharmacy POS</a>
+                </li>
+              </ul>
+              <p class="small text-muted mb-0">
+                All these pieces together act as strong evidence for my learning and achievements
+                in the VIBE Coding & AI Agent Course.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div><!-- row -->
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="section-title text-center mb-4" data-aos="fade-up">
+        <h2 class="fw-bold">Contact Me</h2>
+        <p class="text-muted">
+          Let’s connect for collaboration, feedback, or future opportunities.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Send a Message</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" id="name" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" rows="4" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  <i class="fa-solid fa-paper-plane me-2"></i> Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Connect</h5>
+              <p class="small text-muted">
+                You can also reach me through these platforms:
+              </p>
+              <ul class="list-unstyled small">
+                <li class="mb-2">
+                  <i class="fa-solid fa-envelope me-2 text-primary"></i>
+                  <strong>Email:</strong> shahidiqbalmughaal@gmail.com
+                </li>
+                <li class="mb-2">
+                  <i class="fa-brands fa-linkedin me-2 text-primary"></i>
+                  <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shahid-iqbal-768081270/" target="_blank">linkedin.com/in/shahid-iqbal-768081270</a>
+                </li>
+                <li class="mb-2">
+                  <i class="fa-brands fa-github me-2 text-primary"></i>
+                  <strong>GitHub:</strong> <a href="https://github.com/shahidiqbalmughaal" target="_blank">github.com/shahidiqbalmughaal</a>
+                </li>
+                <li class="mb-2">
+                  <i class="fa-brands fa-whatsapp me-2 text-success"></i>
+                  <strong>WhatsApp:</strong>
+                  <a href="https://wa.me/923068490098" target="_blank">Chat on WhatsApp</a>
+                </li>
+              </ul>
+
+              <p class="small text-muted mb-0">
+                This portfolio is the official final project for my
+                <strong>VIBE Coding & AI Agent Course</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div><!-- row -->
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-3 bg-dark text-center text-white-50">
+    <div class="container small">
+      © <span id="year"></span> Shahid Iqbal – VIBE Coding & AI Agent Portfolio
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

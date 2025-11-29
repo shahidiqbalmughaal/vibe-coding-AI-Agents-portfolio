@@ -1,0 +1,119 @@
+:root {
+  --bg-dark: #050816;
+  --accent: #0d6efd;
+  --accent-soft: rgba(13, 110, 253, 0.08);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(12px);
+  background-color: rgba(15, 23, 42, 0.96) !important;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background: radial-gradient(circle at top left, #1f2937 0, #020617 50%, #000 100%);
+  color: #f9fafb;
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #020617, #111827);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.hero-icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+/* Section generic */
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-title h2 {
+  letter-spacing: 0.03em;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin-left: 10px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(148, 163, 184, 0.5);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 50px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
+}
+
+/* Evidence images */
+.evidence-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.evidence-item img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.evidence-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.03);
+}
+
+/* Project filter buttons */
+.btn-group .btn.active {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* Badge gradient */
+.badge.bg-gradient {
+  background: linear-gradient(135deg, #0d6efd, #22c55e);
+}
+
+/* Footer */
+footer {
+  font-size: 0.85rem;
+}
