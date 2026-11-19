@@ -1,7 +1,18 @@
+/* ============================================================
+   Shahid Iqbal — Portfolio Theme
+   Professional navy + teal design
+   ============================================================ */
 :root {
-  --bg-dark: #050816;
-  --accent: #0d6efd;
-  --accent-soft: rgba(13, 110, 253, 0.08);
+  --navy: #0b2239;
+  --navy-2: #10314f;
+  --accent: #0d7377;
+  --accent-2: #14a3a8;
+  --ink: #1c2b3a;
+  --muted: #5b6b7c;
+  --bg: #f5f8fb;
+  --card-shadow: 0 6px 24px rgba(11, 34, 57, 0.08);
+  --card-shadow-hover: 0 16px 40px rgba(11, 34, 57, 0.16);
+  --radius: 16px;
 }
 
 * {
@@ -10,50 +21,188 @@
 
 body {
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #f8f9fa;
+  background-color: var(--bg);
+  color: var(--ink);
 }
 
-/* Navbar */
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---------- Navbar ---------- */
 .navbar {
   backdrop-filter: blur(12px);
-  background-color: rgba(15, 23, 42, 0.96) !important;
+  background: linear-gradient(90deg, rgba(11, 34, 57, 0.97), rgba(13, 60, 74, 0.97)) !important;
+  box-shadow: 0 2px 18px rgba(11, 34, 57, 0.25);
 }
 
-/* Hero Section */
+.navbar-brand {
+  letter-spacing: 0.02em;
+}
+
+.navbar .nav-link {
+  position: relative;
+  margin: 0 0.15rem;
+  opacity: 0.92;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  opacity: 1;
+  color: #7fe3e6 !important;
+}
+
+/* ---------- Hero ---------- */
 .hero-section {
   min-height: 100vh;
-  padding-top: 100px;
-  padding-bottom: 60px;
-  background: radial-gradient(circle at top left, #1f2937 0, #020617 50%, #000 100%);
-  color: #f9fafb;
+  padding-top: 110px;
+  padding-bottom: 70px;
+  color: #f2f7fa;
+  background:
+    radial-gradient(900px 480px at 12% -10%, rgba(20, 163, 168, 0.35), transparent 60%),
+    radial-gradient(700px 420px at 95% 10%, rgba(13, 115, 119, 0.28), transparent 55%),
+    linear-gradient(135deg, #081a2e 0%, var(--navy) 45%, #0a3542 100%);
+}
+
+.hero-section .text-muted {
+  color: #b9c9d6 !important;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(148, 197, 210, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.hero-icon {
+  font-size: 2.5rem;
+  color: var(--accent-2);
 }
 
 .accent-text {
   color: var(--accent);
 }
 
-.hero-card {
-  background: linear-gradient(135deg, #020617, #111827);
-  border-radius: 1.5rem;
-  padding: 1.75rem;
-  border: 1px solid rgba(148, 163, 184, 0.3);
-}
-
-.hero-icon {
-  font-size: 2.5rem;
-  color: var(--accent);
-}
-
-/* Section generic */
+/* ---------- Sections ---------- */
 .section-padding {
-  padding: 80px 0;
+  padding: 84px 0;
+}
+
+section.bg-light {
+  background-color: #eef3f7 !important;
 }
 
 .section-title h2 {
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.55rem;
 }
 
-/* Timeline */
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.section-title p {
+  margin-top: 0.6rem;
+}
+
+/* ---------- Cards (generic) ---------- */
+.card {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+}
+
+.card-title {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+/* ---------- Project cards ---------- */
+.project-card {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.project-card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(11, 34, 57, 0.06);
+}
+
+.project-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-card a {
+  color: var(--accent);
+}
+
+.project-card a:hover {
+  color: var(--navy);
+}
+
+/* Icon bands for projects without screenshots */
+.project-icon-band {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.band-weather {
+  background: linear-gradient(135deg, #1d6fb8, #39a0d8 55%, #7cc4e8);
+}
+
+.band-board {
+  background: linear-gradient(135deg, #5b4bc4, #7a68d8 55%, #a394ec);
+}
+
+/* Project filter buttons */
+.btn-group .btn {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.btn-group .btn:hover {
+  background-color: rgba(13, 115, 119, 0.1);
+  color: var(--accent);
+}
+
+.btn-group .btn.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---------- Timeline ---------- */
 .timeline {
   position: relative;
   margin-left: 10px;
@@ -65,8 +214,9 @@ body {
   left: 18px;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: rgba(148, 163, 184, 0.5);
+  width: 3px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, var(--accent), rgba(20, 163, 168, 0.25));
 }
 
 .timeline-item {
@@ -79,41 +229,71 @@ body {
   position: absolute;
   left: 10px;
   top: 18px;
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 4px rgba(13, 115, 119, 0.25);
 }
 
-/* Evidence images */
+.timeline-content {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* ---------- Evidence ---------- */
 .evidence-item {
   position: relative;
   overflow: hidden;
-  border-radius: 0.75rem;
+  border-radius: 0.9rem;
+  box-shadow: var(--card-shadow);
 }
 
 .evidence-item img {
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.35s ease, filter 0.35s ease;
 }
 
 .evidence-item:hover img {
   transform: scale(1.05);
-  filter: brightness(1.03);
+  filter: brightness(1.04);
 }
 
-/* Project filter buttons */
-.btn-group .btn.active {
-  background-color: var(--accent);
-  color: #fff;
+/* ---------- Buttons & badges ---------- */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  box-shadow: 0 6px 18px rgba(13, 115, 119, 0.35);
 }
 
-/* Badge gradient */
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0a5f62, var(--accent));
+}
+
 .badge.bg-gradient {
-  background: linear-gradient(135deg, #0d6efd, #22c55e);
+  background: linear-gradient(135deg, var(--accent), #22c55e);
 }
 
-/* Footer */
+.badge {
+  border-radius: 999px;
+  padding: 0.45em 0.8em;
+  font-weight: 500;
+}
+
+/* ---------- Contact form ---------- */
+.form-control:focus {
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 0.2rem rgba(20, 163, 168, 0.18);
+}
+
+/* ---------- Footer ---------- */
 footer {
+  background: linear-gradient(90deg, var(--navy), #0a3542) !important;
   font-size: 0.85rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
 }
