@@ -85,6 +85,15 @@ header{position:fixed;top:18px;left:0;right:0;z-index:100}
 .chip.c3{bottom:30%;left:3%;animation-delay:1.6s}.chip.c4{bottom:34%;right:4%;animation-delay:2.4s}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 @media(max-width:900px){.chip{display:none}}
+.hero-figure{position:relative;z-index:3;margin:1vh auto 0;width:min(235px,54vw)}
+.hero-figure img{width:100%;height:min(42vh,370px);object-fit:cover;object-position:top center;border-radius:999px 999px 26px 26px;border:5px solid var(--chip-bg);box-shadow:0 30px 60px rgba(29,26,22,.3)}
+.voice-card{display:flex;align-items:center;gap:14px;background:#1D1A16;color:#F7F1E5;border-radius:999px;padding:10px 20px 10px 10px;box-shadow:0 18px 38px rgba(0,0,0,.28);cursor:pointer;border:none;font-family:var(--sans);text-align:left}
+.voice-card .vplay{width:46px;height:46px;border-radius:50%;background:var(--cta);display:grid;place-items:center;font-size:16px;color:#fff;flex:none}
+.voice-card .vt1{display:block;font-weight:800;font-size:.92rem;line-height:1.25}
+.voice-card .vt2{display:block;font-size:.76rem;color:#A79E90;font-weight:600}
+.voice-card .vtime{margin-left:4px;background:rgba(255,255,255,.12);padding:5px 11px;border-radius:999px;font-size:.76rem;font-weight:800;white-space:nowrap}
+.portrait .ring{overflow:hidden}
+.portrait .ring img{width:100%;height:100%;object-fit:cover;object-position:top center}
 .hero-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-top:64px;text-align:left;flex-wrap:wrap}
 .hero-intro{max-width:430px}
 .hero-intro .role{font-family:var(--serif);font-style:italic;font-size:1.3rem;margin:10px 0 8px}
@@ -233,6 +242,7 @@ footer{padding:44px 0 54px;border-top:1px solid var(--card-border)}
   <div class="chip c4"><small>Builds</small>Web Apps</div>
   <div class="wrap hero-inner">
     <h1>Shahid<br><span class="second">Iqbal</span></h1>
+    <div class="hero-figure reveal"><img src="assets/avatar.jpg" alt="AI avatar of Shahid Iqbal"></div>
   </div>
   <div class="wrap hero-bottom">
     <div class="hero-intro reveal">
@@ -245,6 +255,12 @@ footer{padding:44px 0 54px;border-top:1px solid var(--card-border)}
       </div>
     </div>
     <div class="hero-side reveal">
+      <button class="voice-card" id="voiceBtn" type="button">
+        <span class="vplay" id="voiceIcon">▶</span>
+        <span><span class="vt1">Say hi 👋</span><span class="vt2">Hear my intro</span></span>
+        <span class="vtime" id="voiceTime">0:13</span>
+      </button>
+      <audio id="introAudio" src="assets/intro.mp3" preload="metadata"></audio>
       <div class="side-chip">📍 Based in Pakistan · <span>working worldwide</span></div>
       <div class="side-chip">⚡ 7 projects built · <span>4 AI agents &amp; automations</span></div>
     </div>
@@ -326,7 +342,7 @@ footer{padding:44px 0 54px;border-top:1px solid var(--card-border)}
   <div class="wrap">
     <div class="about-grid">
       <div class="portrait reveal">
-        <div class="ring"><span class="mono">SI</span></div>
+        <div class="ring"><img src="assets/avatar.jpg" alt="AI avatar of Shahid Iqbal"></div>
         <div class="pchip">Vibe Coding &amp; AI Agents<br><b>4-week program · 2025</b></div>
       </div>
       <div class="about-copy reveal">
@@ -474,6 +490,14 @@ filterBtns.forEach(btn=>btn.addEventListener('click',()=>{
     card.classList.toggle('hide',f!=='all'&&card.dataset.cat!==f);
   });
 }));
+
+// Voice intro player
+const audio=document.getElementById('introAudio'),vBtn=document.getElementById('voiceBtn'),vIcon=document.getElementById('voiceIcon'),vTime=document.getElementById('voiceTime');
+function fmt(s){s=Math.max(0,Math.round(s||0));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+audio.addEventListener('loadedmetadata',()=>{vTime.textContent=fmt(audio.duration);});
+audio.addEventListener('timeupdate',()=>{vTime.textContent=fmt(audio.currentTime)+' / '+fmt(audio.duration);});
+vBtn.addEventListener('click',()=>{if(audio.paused){audio.play();vIcon.textContent='❚❚';}else{audio.pause();vIcon.textContent='▶';}});
+audio.addEventListener('ended',()=>{vIcon.textContent='▶';vTime.textContent=fmt(audio.duration);});
 
 // Scroll reveal
 const io=new IntersectionObserver(entries=>{
